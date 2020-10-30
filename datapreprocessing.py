@@ -42,8 +42,8 @@ x[:,0] = labelencoder_x.fit_transform(x[:,0])
 
 # now emplimenting Dummy Encoding so that ML algorithm model do not attribute an order in to the categorical vairiable so that we can have the correct computation while modeling dataset 
 # The below code is deprecated now so we need to use the ColumnTransformer "------ from sklearn.compose import ColumnTransformer -------"
-#onehotencoder = OneHotEncoder(categorical_features = [0])
-#x = onehotencoder.fit_transform(x).toarray() 
+onehotencoder = OneHotEncoder(categorical_features = [0])
+x = onehotencoder.fit_transform(x).toarray() 
 
 # encoding categorical data in array y
 labelencoder_y = LabelEncoder() 
